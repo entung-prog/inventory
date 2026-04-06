@@ -43,21 +43,6 @@ exports.getProfile = async (req, res) => {
   }
 };
 
-//create user (admin only)
-exports.createUser = async (req, res) => {
-  const { name, email, password, role } = req.body;
-    try {
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const result = await pool.query(
-        "INSERT INTO users (name, email, password, role) VALUES ($1, $2, $3, $4) RETURNING id, name, email, role",
-        [name, email, hashedPassword, role]
-    );
-    res.json(result.rows[0]);
-    } catch (err) {
-    console.error(err);
-    res.status(500).send("Create user failed");
-    }
-};
 
 // UPDATE ROLE (admin only)
 exports.updateUserRole = async (req, res) => {
