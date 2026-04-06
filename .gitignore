@@ -6,6 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Social Media Posts (Personal use only)
+linkedin.txt
+
 # Environment variables
 .env
 .env.local

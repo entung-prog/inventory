@@ -130,12 +130,6 @@ export default function LoginPage() {
               )}
             </Button>
           </form>
-
-          {/* Demo info */}
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm text-blue-800">
-            <p className="font-semibold mb-1">Demo Mode</p>
-            <p>Use your registered credentials to login</p>
-          </div>
         </CardContent>
       </Card>
     </div>
