@@ -1,3 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.6%;
+    --border: 210 40% 96%;
+    --input: 210 40% 96%;
+    --ring: 210 100% 50%;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 0 0% 3.6%;
+      --foreground: 0 0% 98%;
+      --border: 210 40% 20%;
+      --input: 210 40% 20%;
+      --ring: 210 100% 50%;
+    }
+  }
+
+  body {
+    @apply bg-white text-gray-950;
+  }
+}

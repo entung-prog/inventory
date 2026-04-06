@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Inventory App",
-  description: "Fullstack Inventory System",
+  title: "Smart Inventory - Management System",
+  description: "Modern fullstack inventory management system",
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
 }): import("react/jsx-runtime").JSX.Element {
   return (
     <html lang="en">
-      <body className="bg-gray-100">{children}</body>
+      <body className="bg-white">{children}</body>
     </html>
   );
 }

@@ -11,24 +11,31 @@ const authMiddleware = require("./middleware/authMiddleware.js");
 
 const app = express();
 
+// CORS configuration
+const corsOptions = {
+  origin: process.env.CORS_ORIGIN || "http://localhost:3000",
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+// Middleware
+app.use(cors(corsOptions));
+app.use(express.json());
+
 app.get("/", (req, res) => {
-  res.send("Welcome to Smart Inventory API");
+  res.json({ message: "Welcome to Smart Inventory API" });
 });
 
 app.get("/dbtest", async (req, res) => {
   try {
     const result = await pool.query("SELECT NOW()");    
-    res.json(result.rows);
+    res.json({ status: "ok", timestamp: result.rows[0] });
   } catch (err) {
-    console.error(err);
-    res.status(500).send("DB error");
+    console.error("DB test error:", err);
+    res.status(500).json({ error: "Database connection failed" });
   }
 });
-
-// Middleware
-app.use(cors());
-app.use(express.json());
-
 
 // Routes
 app.use("/auth", authRoutes);
@@ -36,6 +43,16 @@ app.use("/users", authMiddleware, require("./routes/userRoutes"));
 app.use("/items", itemRoutes);
 app.use("/category", categoryRoutes);
 
+// 404 Handler
+app.use((req, res) => {
+  res.status(404).json({ error: "Route not found" });
+});
+
+// Global error handler
+app.use((err, req, res, next) => {
+  console.error("Error:", err);
+  res.status(err.status || 500).json({ error: err.message || "Internal server error" });
+});
 
 // Server
 const PORT = process.env.PORT || 5000;

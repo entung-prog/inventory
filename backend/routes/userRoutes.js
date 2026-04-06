@@ -8,15 +8,13 @@ const adminMiddleware = require("../middleware/adminMiddleware");
 // semua route butuh login
 router.use(authMiddleware);
 
-
+// user sendiri - MUST be before /:id route
+router.get("/me", userController.getProfile);
 
 // admin only
 router.get("/", adminMiddleware, userController.getUsers);
 //admin only
 router.get("/:id", adminMiddleware, userController.getUserById);
-
-// user sendiri
-router.get("/me", userController.getProfile);
 
 
 // admin only
