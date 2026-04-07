@@ -6,13 +6,11 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Social Media Posts (Personal use only)
-linkedin.txt
-
-# Environment variables
+# Environment variables (keep .env.example files)
 .env
 .env.local
 .env.*.local
+!.env.example
 
 # Build outputs
 dist/
@@ -20,6 +18,13 @@ build/
 .next/
 out/
 *.tsbuildinfo
+.vercel/
+
+# Database backups (keep schema in version control if needed)
+*.sql
+!schema*.sql
+inventory_backup.sql
+backups/
 
 # IDE
 .vscode/
@@ -27,8 +32,6 @@ out/
 *.swp
 *.swo
 *.swn
-.DS_Store
-Thumbs.db
 
 # OS
 .DS_Store
@@ -37,6 +40,7 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 ehthumbs.db
+Thumbs.db
 
 # Testing
 coverage/
@@ -45,9 +49,11 @@ coverage/
 # Logs
 logs/
 *.log
+lerna-debug.log*
 
 # Misc
 .cache/
+.turbo/
 .eslintcache
 generated/
 

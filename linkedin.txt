@@ -1,0 +1,214 @@
+Day 1 — Smart Inventory System
+Today I started building the backend for my fullstack project using Express.js and PostgreSQL.
+Progress:
+• Backend server setup
+• Database connected successfully
+• Created initial tables (users, items, categories)
+Next: building authentication system (JWT)
+#FullstackDeveloper #BuildInPublic #WebDevelopment
+
+
+Day 2 Update — Authentication Working!
+Successfully tested my authentication system using Thunder Client.
+Features working:
+• User registration
+• Login system
+• JWT token generation
+Next step: building CRUD API for inventory items
+#FullstackDeveloper #Backend #BuildInPublic
+
+
+Day 3 — CRUD API Completed!
+Today I built the core CRUD functionality for my Smart Inventory System.
+Features:
+• Create, Read, Update, Delete items
+• Protected routes using JWT
+• Role-based access (admin/user)
+This is starting to feel like a real application
+#FullstackDeveloper #Backend #BuildInPublic
+
+
+Day 4 — Frontend Setup with Modern Stack
+Started building the frontend using Next.js 16 with Turbopack, React 19, and TypeScript.
+Implementations:
+• Next.js project initialization
+• Tailwind CSS 4 with @tailwindcss/postcss
+• API service with Axios interceptors for JWT tokens
+• Bearer token authentication integrated
+Setup complete, ready to build the UI
+#Frontend #NextJS #React #FullstackDeveloper
+
+
+Day 5 — Authentication UI & Login Page
+Built a beautiful login page with gradient design and professional components.
+Features:
+• Modern card-based login form
+• Email validation
+• Password masked input
+• Smooth loading states
+• JWT token saved to localStorage
+• Auto-redirect after successful login
+The UI is looking sleek!
+
+SCREENSHOT: Login page with gradient background, card design, form fields
+   - Filename: day5-login-page.png
+
+#Frontend #NextJS #UI #DesignSystem
+
+
+Day 6 — Item Management System
+Completed CRUD functionality for items on the frontend.
+Built pages:
+• /items — List all items with admin actions
+• /items/create — Add new item with category selection
+• /items/[id]/edit — Edit existing items
+Features:
+• Edit & Delete buttons with confirmation dialogs
+• Category dropdown integration
+• Real-time validation
+• Admin-only access control
+Inventory management is now fully operational!
+
+SCREENSHOT: Items list page with table, Edit/Delete buttons, "Add New Item" button
+   - Filename: day6-items-list.png
+
+#CRUD #Frontend #FullstackDeveloper #Inventory
+
+
+Day 7 — Category Management Complete
+Added full category management system to the application.
+New pages created:
+• /categories — View all categories
+• /categories/create — Add new category
+• /categories/[id]/edit — Edit category details
+Features:
+• Delete with confirmation dialog
+• Beautiful table layout with badges
+• Admin-only operations
+• Seamless integration with item system
+Categories are now a first-class citizen in our system
+#Frontend #CMS #AdminPanel #FullstackDeveloper
+
+
+Day 8 — Admin Dashboard & User Management
+Built comprehensive admin panel for user management.
+Implementations:
+• /admin/users — View all users
+• Edit user roles (admin/user)
+• Delete users with confirmation
+• Admin-only access protection
+Features:
+• User table with role badges
+• Edit role dialog
+• Protected routes
+Only admins can access this powerful panel!
+
+SCREENSHOT: Admin users page with user table, role badges, edit/delete actions
+   - Filename: day8-admin-users.png
+
+#AdminPanel #Authorization #FullstackDeveloper #RoleBasedAccess
+
+
+Day 9 — Dashboard & Statistics
+Created beautiful home dashboard with real-time statistics.
+Features:
+• Welcome card with user greeting
+• Statistics cards:
+  - Total items count
+  - Total stock sum
+  - Average stock per item
+  - Low stock alerts (5 units or less)
+• Inventory table on dashboard
+• Navbar with user info & logout
+The dashboard is now the perfect landing page!
+
+SCREENSHOT: Full dashboard showing statistics cards + inventory table
+   - Filename: day9-dashboard.png
+
+#Dashboard #Analytics #Frontend #FullstackDeveloper
+
+
+Day 10 — UI Components & Design System
+Implemented professional UI components using shadcn/ui and Radix UI.
+Components built:
+• Button, Input, Label
+• Card system with headers
+• Badge for status indicators
+• Table with advanced features
+• Dialog/Modal system
+• Alert components
+• Dropdown menus
+Created a consistent, scalable design system
+#DesignSystem #ComponentsLibrary #UIUX #Frontend
+
+
+Day 11 — Navigation & Full App Integration
+Completed navigation system with role-based menu items.
+Features:
+• Sticky navbar with logo
+• Navigation links: Dashboard, Items, Categories
+• Admin-only Users link
+• User info display with role badge
+• Logout functionality with confirmation
+• Responsive design for all screen sizes
+The app now feels like a cohesive product
+#Navigation #ResponsiveDesign #Frontend #FullstackDeveloper
+
+
+Day 12 — Authentication & Security
+Implemented secure authentication throughout the entire application.
+Security features:
+• JWT Bearer token validation
+• Auto-logout on token expiration
+• Protected routes (401/403 handling)
+• Admin role verification on sensitive pages
+• CORS configuration
+• Secure token storage with localStorage
+Built with security best practices
+#Security #Authentication #FullstackDeveloper #BestPractices
+
+
+Day 13 — Bug Fixes & Route Optimization
+Fixed critical issues and optimized routes.
+Fixes:
+• Route ordering in user endpoints (/:id before /me)
+• JWT secret configuration from environment variables
+• CORS header handling for Authorization
+• Bearer token parsing validation
+All endpoints now working perfectly
+#BugFixes #Debugging #Backend #FullstackDeveloper
+
+
+Day 14 — Full Stack Complete
+The Smart Inventory System is now fully functional end-to-end.
+What we've built:
+Backend: Express.js + PostgreSQL with full CRUD APIs
+Frontend: Next.js 16 with modern React 19
+Authentication: JWT with role-based access control
+UI: Professional shadcn/ui components with Tailwind CSS
+Features: Items, Categories, Users management
+Admin Panel: Full user management system
+Dashboard: Real-time statistics and analytics
+Security: Protected routes and token management
+
+This project demonstrates:
+• Full CRUD operations
+• Role-based access control
+• TypeScript for type safety
+• Modern component libraries
+• RESTful API design
+• Database management
+• State management
+• Responsive design
+
+Ready for production deployment
+
+SCREENSHOTS:
+   1. Dashboard overview: day9-dashboard.png
+   2. Items management: day6-items-list.png
+   3. Admin panel: day8-admin-users.png
+   4. Carousel/Collage showing all features together
+
+GitHub: https://github.com/entung-prog/inventory
+
+#FullstackDeveloper #BuildInPublic #WebDevelopment #ProjectComplete
